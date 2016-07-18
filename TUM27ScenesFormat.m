@@ -1,5 +1,5 @@
-close all
-clear all
+clear all;
+close all;
 
 %PoseFileName=dir('/Users/jimmy/Desktop/images/TUM_SLAM/freiburg3_long_office_household/seq-01/*.txt');
 
@@ -8,8 +8,8 @@ clear all
 for i = 1:2486
   poseTQFileName = sprintf('/Users/jimmy/Desktop/images/TUM_SLAM/freiburg3_long_office_household/seq-01/frame-%06d.pose.quaternion.txt', i-1);
   PoseTQ=load(poseTQFileName);
-  PoseRT1=PoseTQ2PoseRT(PoseTQ);
-  PoseRT=inv(PoseRT1);
+  PoseRT=PoseTQ2PoseRT(PoseTQ);
+  
   poseRTFileName = sprintf('/Users/jimmy/Desktop/images/TUM_SLAM/freiburg3_long_office_household/seq-01/frame-%06d.pose.txt', i-1);
   fileID = fopen(poseRTFileName,'w');
   for j=1:4
@@ -17,4 +17,5 @@ for i = 1:2486
   end
   fclose(fileID);
 end
+
 
