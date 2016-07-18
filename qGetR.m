@@ -10,10 +10,11 @@ function R = qGetR( Qrotation )
 % VERSION: 03.03.2012
 
 
-w = Qrotation( 1 );
-x = Qrotation( 2 );
-y = Qrotation( 3 );
-z = Qrotation( 4 );
+
+x = Qrotation( 1 );
+y = Qrotation( 2 );
+z = Qrotation( 3 );
+w = Qrotation( 4 );
 
 Rxx = 1 - 2*(y^2 + z^2);
 Rxy = 2*(x*y - z*w);
